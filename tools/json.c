@@ -185,7 +185,12 @@ void print_json_frame_header(OBPFrameHeader *my_struct)
     printf("        \"using_qmatrix\": %d,\n", my_struct->quantization_params.using_qmatrix);
     printf("        \"qm_y\": %"PRIu8",\n", my_struct->quantization_params.qm_y);
     printf("        \"qm_u\": %"PRIu8",\n", my_struct->quantization_params.qm_u);
-    printf("        \"qm_v\": %"PRIu8"\n", my_struct->quantization_params.qm_v);
+    printf("        \"qm_v\": %"PRIu8",\n", my_struct->quantization_params.qm_v);
+    printf("        \"DeltaQYDc\": %"PRId32",\n", my_struct->quantization_params.DeltaQYDc);
+    printf("        \"DeltaQUDc\": %"PRId32",\n", my_struct->quantization_params.DeltaQUDc);
+    printf("        \"DeltaQUAc\": %"PRId32",\n", my_struct->quantization_params.DeltaQUAc);
+    printf("        \"DeltaQVDc\": %"PRId32",\n", my_struct->quantization_params.DeltaQVDc);
+    printf("        \"DeltaQVAc\": %"PRId32"\n", my_struct->quantization_params.DeltaQVAc);
     printf("    },\n");
     printf("    \"segmentation_params\": {\n");
     printf("        \"segmentation_enabled\": %d,\n", my_struct->segmentation_params.segmentation_enabled);
